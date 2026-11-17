@@ -9,6 +9,14 @@ Tiny Windows 11 utility that shows the battery level of wireless peripherals
 - ~1.7 MB private memory, no CPU at idle (one cheap poll per minute).
 - Starts with Windows (per-user `Run` key, toggle in the right-click menu).
 
+## Download
+
+Get `BatteryBar.exe` from the [latest release](https://github.com/basarsy/batteryBar/releases/latest),
+put it anywhere (e.g. `%LOCALAPPDATA%\Programs\BatteryBar`) and double-click it. That's it: no installer,
+no runtime. It registers itself to start with Windows (toggle in the right-click menu).
+
+The exe is unsigned, so SmartScreen may warn on first launch: click **More info › Run anyway**.
+
 ## Supported devices
 
 | Source | Devices |
@@ -27,7 +35,7 @@ protocols. You can add one as another `Query*` provider in `src/devices.h`.
 - A device that stops answering (sleeping/off) stays visible but dimmed for 30 minutes, then disappears.
 - `BatteryBar.exe --list` prints the detected devices to the console.
 
-## Build
+## Build from source
 
 Requires MinGW-w64 (`winget install BrechtSanders.WinLibs.POSIX.UCRT`), with `g++` on `PATH`.
 
